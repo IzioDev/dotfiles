@@ -6,9 +6,7 @@ local servers = {
   "html",
   "cssls",
   "rust_analyzer",
-  "angularls",
   "tsserver",
-  "eslint",
   "terraform_lsp",
   "docker_compose_language_service",
 }
@@ -19,3 +17,16 @@ for _, lsp in ipairs(servers) do
     capabilities = capabilities,
   }
 end
+
+local util = require "lspconfig.util"
+
+lspconfig["angularls"].setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  root_dir = util.root_pattern("angular.json", "project.json"),
+}
+
+lspconfig["eslint"].setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
