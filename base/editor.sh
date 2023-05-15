@@ -23,7 +23,7 @@ make CMAKE_BUILD_TYPE=RelWithDebInfo
 sudo make install
 
 # install NvChad
-git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
+git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
 
 # copy custom config
 cp -r ./custom/* ~/.config/nvim/lua/custom/
