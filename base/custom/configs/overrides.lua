@@ -41,6 +41,9 @@ M.mason = {
     -- real man stuff
     "terraform-ls",
     "rust-analyzer",
+
+    "pyright",
+    "autopep8",
   },
 }
 

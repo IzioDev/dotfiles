@@ -9,6 +9,7 @@ local servers = {
   "tsserver",
   "terraform_lsp",
   "docker_compose_language_service",
+  "pyright",
 }
 
 for _, lsp in ipairs(servers) do

@@ -17,6 +17,8 @@ local sources = {
 
   b.formatting.eslint_d,
   b.formatting.rustfmt,
+
+  b.formatting.autopep8,
 }
 
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
