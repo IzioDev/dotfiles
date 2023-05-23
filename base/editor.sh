@@ -5,12 +5,9 @@ rm -rf ~/.local/share/nvim
 # install dependencies of neovim
 sudo apt-get install ripgrep
 
-echo "[-] Download fonts [-]"
-echo "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.0.1/JetBrainsMono.zip"
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.0.1/JetBrainsMono.zip
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.1/DroidSansMono.zip
 unzip DroidSansMono.zip -d ~/.fonts
 fc-cache -fv
-echo "done!"
 
 # install neovim from sources
 ## deps
@@ -28,3 +25,4 @@ git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
 # copy custom config
 cp -r ./custom/* ~/.config/nvim/lua/custom/
 
+echo INSTRUCTION: set terminal font to DoidSansMono
