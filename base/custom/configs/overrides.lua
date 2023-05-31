@@ -13,6 +13,7 @@ M.treesitter = {
     "markdown",
     "markdown_inline",
     "rust",
+    "terraform",
   },
   indent = {
     enable = true,
@@ -76,6 +77,12 @@ M.telescope = {
       "--smart-case",
       "-u",
     },
+  },
+}
+
+M.copilot = {
+  suggestion = {
+    auto_trigger = true,
   },
 }
 

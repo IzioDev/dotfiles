@@ -7,7 +7,7 @@ local servers = {
   "cssls",
   "rust_analyzer",
   "tsserver",
-  "terraform_lsp",
+  "terraformls",
   "docker_compose_language_service",
   "pyright",
 }
