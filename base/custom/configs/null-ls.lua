@@ -15,7 +15,7 @@ local sources = {
   -- Lua
   b.formatting.stylua,
 
-  b.formatting.eslint_d,
+  b.formatting.eslint,
   b.formatting.rustfmt,
 
   b.formatting.autopep8,
@@ -31,7 +31,6 @@ local on_attach = function(client, bufnr)
       group = augroup,
       buffer = bufnr,
       callback = function()
-        -- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
         vim.lsp.buf.format { bufnr = bufnr }
       end,
     })
