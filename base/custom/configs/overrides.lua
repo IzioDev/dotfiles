@@ -14,6 +14,7 @@ M.treesitter = {
     "markdown_inline",
     "rust",
     "terraform",
+    "yaml",
   },
   indent = {
     enable = true,
@@ -45,6 +46,7 @@ M.mason = {
 
     "pyright",
     "autopep8",
+    "yaml-language-server",
   },
 }
 

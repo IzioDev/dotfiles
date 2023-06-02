@@ -21,6 +21,7 @@ local sources = {
   b.formatting.autopep8,
 
   b.formatting.terraform_fmt,
+  b.formatting.yamlfmt,
 }
 
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
