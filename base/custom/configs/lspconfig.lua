@@ -11,6 +11,7 @@ local servers = {
   "terraformls",
   "docker_compose_language_service",
   "pyright",
+  "prismals",
 }
 
 for _, lsp in ipairs(servers) do

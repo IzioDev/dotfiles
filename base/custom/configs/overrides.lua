@@ -15,6 +15,7 @@ M.treesitter = {
     "rust",
     "terraform",
     "yaml",
+    "prisma",
   },
   indent = {
     enable = true,
@@ -47,6 +48,7 @@ M.mason = {
     "pyright",
     "autopep8",
     "yaml-language-server",
+    "prisma-language-server",
   },
 }
 
