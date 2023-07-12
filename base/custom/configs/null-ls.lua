@@ -10,7 +10,7 @@ local sources = {
 
   -- webdev stuff
   -- b.formatting.deno_fmt, -- choosed deno for ts/js files cuz its very fast!
-  b.formatting.prettier.with { filetypes = { "html", "markdown", "css", "typescript", "javascript", "json" } }, -- so prettier works only on these filetypes
+  b.formatting.prettier.with { filetypes = { "html", "markdown", "css", "typescript", "javascript", "json" } },
 
   -- Lua
   b.formatting.stylua,
@@ -32,7 +32,13 @@ local on_attach = function(client, bufnr)
       group = augroup,
       buffer = bufnr,
       callback = function()
-        vim.lsp.buf.format { bufnr = bufnr }
+        vim.lsp.buf.format {
+          timeout_ms = 5000,
+          async = false,
+          filter = function(_client)
+            return _client.name == "null-ls"
+          end,
+        }
       end,
     })
   end
