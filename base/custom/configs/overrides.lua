@@ -6,9 +6,6 @@ M.treesitter = {
     "lua",
     "html",
     "css",
-    "javascript",
-    "typescript",
-    "tsx",
     "c",
     "markdown",
     "markdown_inline",
@@ -18,7 +15,7 @@ M.treesitter = {
     "prisma",
   },
   indent = {
-    enable = true,
+    enable = false,
     -- disable = {
     --   "python"
     -- },
