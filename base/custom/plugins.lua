@@ -1,12 +1,19 @@
 local overrides = require "custom.configs.overrides"
-
+local telescope_overrides = require "custom.configs.telescope.telescope"
 ---@type NvPluginSpec[]
 local plugins = {
 
   -- Override plugin definition options
   {
     "nvim-telescope/telescope.nvim",
-    opts = overrides.telescope,
+    dependencies = {
+      "nvim-lua/plenary.nvim", -- Useful Lua utilities
+
+      -- FZF sorter for Telescope
+      { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+      { "nvim-telescope/telescope-live-grep-args.nvim" },
+    },
+    opts = telescope_overrides.telescope,
   },
   {
     "neovim/nvim-lspconfig",
@@ -42,13 +49,13 @@ local plugins = {
   },
 
   -- Install a plugin
-  {
-    "max397574/better-escape.nvim",
-    event = "InsertEnter",
-    config = function()
-      require("better_escape").setup()
-    end,
-  },
+  -- {
+  --   "max397574/better-escape.nvim",
+  --   event = "InsertEnter",
+  --   config = function()
+  --     require("better_escape").setup()
+  --   end,
+  -- },
   -- Copilot
   {
     "zbirenbaum/copilot.lua",
@@ -68,11 +75,11 @@ local plugins = {
     opts = {
       sources = {
         { name = "nvim_lsp", group_index = 2 },
-        { name = "copilot",  group_index = 2 },
-        { name = "luasnip",  group_index = 2 },
-        { name = "buffer",   group_index = 2 },
+        { name = "copilot", group_index = 2 },
+        { name = "luasnip", group_index = 2 },
+        { name = "buffer", group_index = 2 },
         { name = "nvim_lua", group_index = 2 },
-        { name = "path",     group_index = 2 },
+        { name = "path", group_index = 2 },
       },
     },
   },
