@@ -36,7 +36,7 @@ M.mason = {
     "prettier",
     "html-lsp",
     "angular-language-server",
-    "eslint-lsp",
+    "eslint_d",
 
     -- real man stuff
     "terraform-ls",

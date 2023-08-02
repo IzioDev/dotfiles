@@ -15,7 +15,10 @@ local sources = {
   -- Lua
   b.formatting.stylua,
 
-  b.formatting.eslint,
+  b.formatting.eslint_d,
+  b.code_actions.eslint_d,
+  b.diagnostics.eslint_d,
+
   b.formatting.rustfmt,
 
   b.formatting.autopep8,

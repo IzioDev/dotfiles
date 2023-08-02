@@ -31,12 +31,6 @@ lspconfig["angularls"].setup {
   root_dir = util.root_pattern("angular.json", "project.json"),
 }
 
-lspconfig["eslint"].setup {
-  on_init = on_init,
-  on_attach = on_attach,
-  capabilities = capabilities,
-}
-
 lspconfig["yamlls"].setup {
   on_init = on_init,
   on_attach = on_attach,
@@ -47,3 +41,5 @@ lspconfig["yamlls"].setup {
     },
   },
 }
+
+-- require("typescript-tools").setup {}
