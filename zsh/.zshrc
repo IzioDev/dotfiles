@@ -9,7 +9,7 @@ ZSH_THEME="agnoster"
 # zstyle ':omz:update' mode auto      # update automatically without asking
 # zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
-plugins=(git kubectl ssh-agent z docker docker-compose zsh-autosuggestions zsh-syntax-highlight zsh-fast-syntax-highlighting zsh-autocomplete terraform)
+plugins=(git kubectl ssh-agent z docker docker-compose zsh-autosuggestions zsh-syntax-highlighting fast-syntax-highlighting zsh-autocomplete terraform)
 
 zstyle :omz:plugins:ssh-agent identities id_rsa github_wsl
 
