@@ -55,6 +55,17 @@ M.nvimtree = {
     enable = true,
   },
 
+  view = {
+    preserve_window_proportions = false,
+  },
+
+  actions = {
+    open_file = {
+      resize_window = true,
+      --
+    },
+  },
+
   renderer = {
     highlight_git = true,
     icons = {

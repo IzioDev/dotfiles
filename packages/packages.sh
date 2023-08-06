@@ -1,2 +1,2 @@
-sudo apt install -y zsh curl
+sudo apt install -y zsh curl fd-find
 
